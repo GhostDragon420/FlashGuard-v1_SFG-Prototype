@@ -1,0 +1,44 @@
+# SFG-FlashGuard Git Ignore
+# -------------------------
+
+# System folders
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# VS Code workspace files
+.vscode/
+.settings/
+*.code-workspace
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+
+# Logs and runtime state
+state/
+logs/
+*.log
+*.tmp
+*.bak
+
+# Zips, binaries, firmware blobs
+*.zip
+*.CAP
+*.bin
+*.exe
+*.msi
+
+# Backup files
+*.old
+*.bak
+*.swp
