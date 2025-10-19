@@ -4,8 +4,8 @@
 
 ------------------------------------
 
-## My Goal: 
-To make BIOS/ME flashes safer, faster, more predictable. And eventually by a single click it will take a snapshot of your current firmware/hardware state, and validating payloads/flashes, And safely restoring your settings immediately after reboot.
+## My Goals: 
+To make the chore of BIOS/ME flashing safer, faster, more predictable. And eventually with a single click, it will be able to take a snapshot of your current firmware/hardware state, and validate payloads/flashes. And most importantly and safely restore your settings immediately after sucessful reboot.
 
 # ATTENTION!!!!
   This is a prerelease prototype only. It doesn’t flash anything yet. But it does create a “snapshot” in format of a JSON file, as ot va;odate a pretend payload/flashing and iwll show you were ME/EFI hooks   should go.  But *AGAIN* it is a PRERELEASE PROTOTYPE ONLY!!!!
