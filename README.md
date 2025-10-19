@@ -1,43 +1,35 @@
 # SFG-FlashGuard (Prototype v0.1)
 
-**Goal:** Make BIOS/ME flashes fast, predictable, and (eventually) one‑click by
-snapshooting your current firmware/hardware state, validating payloads, and restoring
-safe settings after a reboot.
+**This is an early prototype of Sync-First Gate(SFG) as a Read-Only BIOS/Firmware data tool. It does NOT flash or change anything on your PC — it only reads and logs data.**
 
-> This is a **prototype skeleton**. It doesn’t flash anything yet. It creates a “snapshot”
-> JSON, validates a pretend payload, and outlines where ME/EFI hooks would go.
+------------------------------------
 
-## What it does today
-- Collects a *hardware/firmware* snapshot using Windows-safe commands (WMI/PowerShell).
-- Saves results in `./state/snapshots/<hostname>-<timestamp>.json`.
-- Validates a mock firmware payload file (hash + compatibility fields).
-- Prepares a “post-flash plan” with boot order, memory profile, and fan curve hints.
+## My Goal: 
+To make BIOS/ME flashes safer, faster, more predictable. And eventually by a single click it will take a snapshot of your current firmware/hardware state, and validating payloads/flashes, And safely restoring your settings immediately after reboot.
 
-## Roadmap (high level)
+# ATTENTION!!!!
+  This is a prerelease prototype only. It doesn’t flash anything yet. But it does create a “snapshot” in format of a JSON file, as ot va;odate a pretend payload/flashing and iwll show you were ME/EFI hooks   should go.  But *AGAIN* it is a PRERELEASE PROTOTYPE ONLY!!!!
+
+## What it will do today
+- It will collects a *hardware/firmware* snapshot using harmless commands such as WMI and PowerShell.
+- It will save its results here = `./state/snapshots/<hostname>-<timestamp>.json`.
+- It will validat a *mock* firmware payload file which is metadata file to look like a BIOS/Firmware Update)
+- It will prepare a “post-flash plan” with a boot order, a memory profile, and fan curve hints.
+
+## Projected Roadmap (2025-2026)
 1. **MEI / FW Tooling**
    - Detect Intel MEI driver + version (WMI device query).
    - Add wrappers for `FWUpdLcl64.exe` (Intel ME firmware) and OEM BIOS CLI tools.
 2. **EFI variable I/O**
-   - Read/write NVRAM: boot order, SecureBoot mode, Re‑BAR, XMP status (vendor-specific).
+   - It will be able to Read and Copy setting lik NVRAM: boot order, SecureBoot mode, Re‑BAR, XMP status (vendor-specific) so as not to lose anything incase of a Rollback.
 3. **Policy Engine**
-   - Compare pre‑flash snapshot with post‑flash platform map to reapply only safe params.
+   - Compares pre‑flash snapshot with the post‑flash platform map so that it will reapply only safe params.
 4. **Rollback**
-   - Keep last known-good BIOS config + ME region checksum; auto-rollback on failure.
+   - Keeps the last known-good BIOS config + ME region checksum and will auto-rollback incase of failure.
 
-## Usage
-```bash
-# 1) Create a snapshot
-python flashguard.py snapshot
-
-# 2) Validate a (mock) payload
-python flashguard.py validate --payload samples/mock_firmware_payload.json
-
-# 3) Plan a post-flash restore
-python flashguard.py plan --xmp 3200 --boot nvme:CT1000P3PSSD8 --rebar on
-```
-
-## Notes
+## Usage & Notes
+- There is a detailed How-To-Use.md document in v0.1 PreRelease Protoyte that has a python launcher.
 - Windows-only for now (PowerShell calls). Linux/Mac support planned.
-- This is *read-only* and safe. No firmware writes.
-- All results go to `./state/`.
+- This is *read-only* and safe. It *does not* write to any file other than the one you tell it to and also,
+- All results will go to `./state/`.
 
