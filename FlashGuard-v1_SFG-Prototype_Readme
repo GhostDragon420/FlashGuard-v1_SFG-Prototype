@@ -1,4 +1,4 @@
-# SFG-FlashGuard (Prototype v0.1)
+# FlashGuard-v1_SFG-Prototype README
 
 **This is an early prototype of Sync-First Gate(SFG) as a Read-Only BIOS/Firmware data tool. It does NOT flash or change anything on your PC — it only reads and logs data.**
 
@@ -28,7 +28,7 @@ To make the chore of BIOS/ME flashing safer, faster, more predictable. And event
    - Keeps the last known-good BIOS config + ME region checksum and will auto-rollback incase of failure.
 
 ## Usage & Notes
-- There is a detailed How-To-Use.md document in v0.1 PreRelease Protoyte that has a python launcher.
+- There is a detailed FlashGuard-v1_SFG-Prototype_Readme.md document in v.1_SFG-Protoyte that has a python launcher.
 - Windows-only for now (PowerShell calls). Linux/Mac support planned.
 - This is *read-only* and safe. It *does not* write to any file other than the one you tell it to and also,
 - All results will go to `./state/`.
