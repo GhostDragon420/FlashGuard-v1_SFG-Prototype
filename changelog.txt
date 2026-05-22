@@ -3,3 +3,5 @@
 * Updated README.md
 * Updated LICENSE
 * General Cleanup of the Repo
+* Added 7zip and zip folders for download
+* Released with new v01.1 with new zip folders
