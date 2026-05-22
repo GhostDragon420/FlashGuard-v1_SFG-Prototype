@@ -1,9 +1,9 @@
-# FlashGuard-v1_SFG-Prototype
+# FlashGuard_SFG-Prototype
 
 🏷️ **BRANDING & ABOUT (SFE LLC)**
 
 * **Product:** FlashGuard-v1_SFG-Prototype
-* **Version:** v1
+* **Version:** v.01.1
 * **Status:** SFG-Prototype
 * **Created by:** [Jon Merriman / Juggalospsyco420 / GhostDragon420](https://github.com/GhostDragon420)
 
